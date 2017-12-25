@@ -50,6 +50,13 @@ app.get('/about', (req, res) => {
         currentYear: new Date().getFullYear()
     });
 });
+
+app.get('/project', (req, res) => {
+    res.render('project.hbs', {
+        projectName: 'First test app',
+        projectMsg: 'This is a test deployment'
+    })
+});
 app.listen(port, () => {
     console.log(`server is up on port ${port}`);
 });
