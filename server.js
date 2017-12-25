@@ -52,10 +52,10 @@ app.get('/about', (req, res) => {
 });
 
 app.get('/project', (req, res) => {
-    res.render('project.hbs', {
+    res.render('projects.hbs', {
         projectName: 'First test app',
         projectMsg: 'This is a test deployment'
-    })
+    });
 });
 app.listen(port, () => {
     console.log(`server is up on port ${port}`);
