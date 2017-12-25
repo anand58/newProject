@@ -21,14 +21,16 @@ app.use((req, res, next) => {
     next();
 });
 
-// stops everything from being accessed. Helps during site maintenance. 
-app.use((req, res, next) => {
-    res.render('maintenance.hbs');
-
-});
-
 
 app.use(express.static(__dirname + '/public'));
+
+
+// // stops everything from being accessed. Helps during site maintenance. 
+// app.use((req, res, next) => {
+//     res.render('maintenance.hbs');
+
+// });
+
 
 
 app.set('view engine', 'hbs');
